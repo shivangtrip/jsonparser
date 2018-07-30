@@ -1,0 +1,11 @@
+<ul>
+  {{#each-in categories as |category products|}}
+    <li>{{category}}
+      {{#if (is-object products)}}
+          {{output-holder categories=products}}
+            {{else}} {{products}}
+      {{/if}}
+      
+    </li>
+  {{/each-in}}
+</ul>
